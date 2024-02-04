@@ -1,7 +1,10 @@
 package entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -10,6 +13,9 @@ import java.util.Date;
 import java.util.UUID;
 @Getter
 @Setter
+@Entity
+@Table(name = "paren_table")
+@JsonIgnoreProperties({"password"})
 public class Parent {
 
     @Id

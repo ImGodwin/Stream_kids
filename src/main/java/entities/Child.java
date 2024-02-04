@@ -1,9 +1,6 @@
 package entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -14,6 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
+@Table(name = "child_table")
 public class Child {
 
     @Id
@@ -30,6 +28,8 @@ public class Child {
     @CreationTimestamp
     private Date createdAt;
 
+    /*@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn()*/
 
 
 }
