@@ -15,7 +15,12 @@ public class Parent {
     private UUID id;
     private String name;
     private String surname;
+    private String occupation;
+    private String nationality;
+    private long telephone;
+    private String address;
     private String email;
+    private String password;
 
 
 }
